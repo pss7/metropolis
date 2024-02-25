@@ -37,8 +37,9 @@ function Sidemenu() {
     return (
         <section id="sideMenuWrap">
 
+
+            <Nav />
             <Link>
-                <Nav />
                 <KeyboardDoubleArrowRightIcon />
             </Link>
 
