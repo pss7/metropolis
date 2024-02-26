@@ -1,9 +1,9 @@
 import { Link } from '@mui/material';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
-function Sidemenu() {
+function SideMenu() {
 
-    function Nav() {
+    function SideMenuNav() {
 
         return (
             <nav>
@@ -35,17 +35,17 @@ function Sidemenu() {
     }
 
     return (
-        <section id="sideMenuWrap">
+        <aside id="sideMenuWrap">
 
 
-            <Nav />
+            <SideMenuNav />
             <Link>
                 <KeyboardDoubleArrowRightIcon />
             </Link>
 
-        </section>
+        </aside>
     )
 
 }
 
-export default Sidemenu
+export default SideMenu

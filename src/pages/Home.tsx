@@ -1,9 +1,14 @@
 import Main from '../components/section/Main';
 
 
-const Home = () => {
+function Home() {
     return (
         <Main>
+
+            <h1 className='tit'>
+                body
+            </h1>
+
         </Main>
     )
 }

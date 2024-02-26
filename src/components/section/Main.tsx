@@ -1,17 +1,23 @@
 import Header from './Header';
 import Footer from './Footer';
-import Sidemenu from './Sidemenu';
+import SideMenu from './SideMenu';
+import Breadcrumb from '../Breadcrumb';
 
 function Main(props: any) {
 
   return (
     <>
       <Header />
+      <SideMenu />
       <main id='main'>
-        <Sidemenu />
-        <h1 className='tit'>
-          body
-        </h1>
+
+        {
+
+          props.children
+    
+
+        }
+
       </main>
       <Footer />
     </>
