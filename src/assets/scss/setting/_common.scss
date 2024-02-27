@@ -1,161 +1,340 @@
-  .container {
-      padding: 0 20px;
-  }
+ .container {
+     padding: 0 20px;
+ }
 
-  .tit {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      text-transform: uppercase;
-  }
+ .tit {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     text-transform: uppercase;
+ }
 
-  /* logoWrap */
-  #logoWrap {
-      h1 {
-          width: 300px;
-          height: 50px;
-          line-height: 50px;
-          color: #fff;
-          font-size: 26px;
-          background-color: #d19f9f;
-          text-align: center;
+ /* logoWrap */
+ #logoWrap {
+     h1 {
+         width: 300px;
+         height: 50px;
+         line-height: 50px;
+         color: #fff;
+         font-size: 26px;
+         background-color: #d19f9f;
+         text-align: center;
 
-          a {
-              display: block;
-              text-decoration: none;
-              color: #fff;
-          }
-      }
-  }
+         a {
+             display: block;
+             text-decoration: none;
+             color: #fff;
+         }
+     }
+ }
 
-  /* sideMenuWrap */
-  #sideMenuWrap {
-      padding-top: 148px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60px;
-      height: 100%;
-      z-index: 9;
-      background-color: #f7f7f7;
-      box-shadow: 0px 0 10px rgba(0, 0, 0, .15);
-      text-align: center;
+ /* sideMenuWrap */
+ #sideMenuWrap {
+     padding-top: 148px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 60px;
+     height: 100vh;
+     z-index: 9;
+     background-color: #f7f7f7;
+     box-shadow: 0px 0 10px rgba(0, 0, 0, .15);
+     text-align: center;
 
-      a {
-          display: block;
-          text-decoration: none;
-          color: #000;
-          cursor: pointer;
-          font-weight: 500;
-          font-size: 20px;
-      }
+     a {
+         display: block;
+         text-decoration: none;
+         color: #000;
+         cursor: pointer;
+         font-weight: 500;
+         font-size: 20px;
+     }
 
-      .tit {
-          margin: 20px 0 10px;
-          top: 70px;
-          position: absolute;
-          width: 100%;
-          font-size: 20px;
-          text-align: center;
-          line-height: 20px;
-          left: 0;
-          transform: none;
-      }
+     .tit {
+         margin: 20px 0 10px;
+         top: 70px;
+         position: absolute;
+         width: 100%;
+         font-size: 20px;
+         text-align: center;
+         line-height: 20px;
+         left: 0;
+         transform: none;
+     }
 
-      ul li {
-          margin-bottom: 20px;
-      }
+     ul li {
+         margin-bottom: 20px;
+     }
 
-      svg {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: 20px;
-      }
+     svg {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom: 20px;
+     }
 
-  }
+ }
 
-  /* breadCrumbWrap */
-  .breadCrumbWrap {
+ /* breadCrumbWrap */
+ .breadCrumbWrap {
 
-      margin: 20px 0 30px;
+     margin: 20px 0 30px;
 
-      .breadCrumb {
-          padding-left: 30px;
-          display: flex;
-          gap: 0 22px;
-          align-items: center;
-          height: 50px;
-          background-color: #dcd3d3;
+     .breadCrumb {
+         padding-left: 30px;
+         display: flex;
+         gap: 0 22px;
+         align-items: center;
+         height: 50px;
+         background-color: #dcd3d3;
+         border-radius: 5px;
 
-          li {
-              font-weight: 700;
-              position: relative;
+         li {
+             font-weight: 700;
+             position: relative;
 
-              &::after {
-                  content: "";
-                  position: absolute;
-                  top: 12px;
-                  width: 11px;
-                  height: 2px;
-                  right: -18px;
-                  background-color: #333;
-                  transform: rotate(-25deg);
-              }
+             &::after {
+                 content: "";
+                 position: absolute;
+                 top: 12px;
+                 width: 11px;
+                 height: 2px;
+                 right: -18px;
+                 background-color: #333;
+                 transform: rotate(-25deg);
+             }
 
-              &::before {
-                  content: "";
-                  position: absolute;
-                  top: 8px;
-                  width: 11px;
-                  height: 2px;
-                  right: -18px;
-                  background-color: #333;
-                  transform: rotate(25deg);
-              }
+             &::before {
+                 content: "";
+                 position: absolute;
+                 top: 8px;
+                 width: 11px;
+                 height: 2px;
+                 right: -18px;
+                 background-color: #333;
+                 transform: rotate(25deg);
+             }
 
-              &:last-child::after,
-              &:last-child::before {
-                  display: none;
-              }
+             &:last-child::after,
+             &:last-child::before {
+                 display: none;
+             }
 
-          }
-      }
-  }
+         }
+     }
+ }
 
-  /* tabListWrap */
-  .tabListWrap {
-      .tabList {
-          display: flex;
-          gap: 0 3px;
+ /* tabListWrap */
+ .tabListWrap {
+     margin: 20px 0;
 
-          li {
-              a {
-                  display: block;
-                  font-size: 13px;
-                  background-color: #ebebeb;
-                  text-align: center;
-                  padding: 8px 10px 5px;
-                  border-radius: 10px 10px 0 0;
-                  font-weight: 700;
-                  line-height: 1;
-              }
-          }
-      }
-  }
+     .tabList {
+         display: flex;
+         gap: 0 3px;
 
-  .tabContentWrap {
-      min-height: 300px;
-      padding: 30px 20px;
-      border: 1px solid #bfbfbf;
+         li {
+             a {
+                 display: block;
+                 font-size: 13px;
+                 background-color: #ebebeb;
+                 text-align: center;
+                 padding: 8px 10px 5px;
+                 border-radius: 10px 10px 0 0;
+                 font-weight: 700;
+                 line-height: 1;
 
-      .tabContent {
-          font-weight: 500;
-          font-size: 18px;
-          }
+                 &:hover {
+                     color: #fff;
+                     background-color: #5b5959;
+                     transition: all .3s;
+                 }
 
-  }
+                 &.active {
+                     color: #fff;
+                     background-color: #5b5959;
+                 }
+             }
+         }
+     }
+ }
 
-  /* active */
-  .active{display: block;} 
+ /* tabContentWrap */
+ .tabContentWrap {
+     position: relative;
+     padding: 50px 20px;
+     border: 1px solid #bfbfbf;
+
+     .titText03 {
+         margin-top: -15px;
+     }
+
+     .tabContent {
+         font-weight: 500;
+         font-size: 18px;
+     }
+
+     .downLoadBtnWrap {
+         position: absolute;
+         top: 18px;
+         right: 25px;
+     }
+
+ }
+
+ /* cardWrap*/
+ .cardWrap {
+     .cardList {
+         display: flex;
+         gap: 0 30px;
+         align-items: center;
+         justify-content: center;
+
+         li {
+             .cardText {
+                 display: block;
+                 margin: 5px 0 10px;
+                 font-weight: 700;
+                 text-align: center;
+             }
+
+             .cardBox {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 width: 200px;
+                 height: 130px;
+                 background-color: #f9f9f9;
+                 border-radius: 7px;
+                 box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+                 font-weight: 700;
+                 font-size: 20px;
+             }
+         }
+     }
+ }
+
+ /* table_wrap */
+ .table_wrap {
+     table {
+         width: 100%;
+
+         thead {
+             th {
+                 padding: 3px;
+                 text-align: center;
+                 border: 1px solid #ddd;
+                 background-color: #f9f9f9;
+                 font-size: 14px;
+             }
+         }
+
+         tbody {
+             tr {
+                 &:nth-child(even) {
+                     background-color: #ddd;
+                 }
+
+                 td {
+                     &:not(:first-child) {
+                         text-align: center;
+                     }
+                 }
+             }
+
+             td {
+                 padding: 7px 5px 7px 10px;
+                 font-size: 13px;
+                 font-weight: 500;
+             }
+         }
+     }
+ }
+
+ /* titText */
+ .titText03 {
+     margin: 15px 0 10px;
+     font-size: 18px;
+
+     strong {
+         font-size: 22px;
+     }
+ }
+
+ /* downLoadBtnWrap */
+ .downLoadBtnWrap {
+     .downLoadBtn {
+         display: flex;
+         align-items: center;
+         gap: 0 12px;
+
+         li {
+             button {
+                 display: block;
+                 background-color: transparent;
+                 border: 0;
+                 padding: 0;
+                 cursor: pointer;
+                 transition: all .3s;
+
+                 &:hover {
+                     transform: rotateY(180deg);
+                 }
+
+                 svg {
+                     display: block;
+                     width: 23px;
+                     height: 23px;
+                 }
+             }
+         }
+     }
+ }
+
+ /* selectWrap */
+ .selectWrap {
+     padding: 10px 50px;
+     min-width: 600px;
+     display: table;
+     background-color: #eee;
+     margin: 30px auto 50px;
+     border-radius: 5px;
+     box-shadow: 4px 3px 7px rgba(0, 0, 0, .2);
+
+     .selectBox {
+         display: flex;
+         gap: 0 3px;
+         align-items: center;
+         justify-content: center;
+
+         select {
+             position: relative;
+             width: 200px;
+             height: 30px;
+             font-size: 13px;
+             padding-left: 5px;
+             border: 1px solid #bfbfbf;
+             font-weight: 500;
+             cursor: pointer;
+             border-radius: 5px;
+
+             option {
+                 font-size: 12px;
+             }
+
+         }
+     }
+ }
+
+ /* useswrap */
+ .useswrap {
+     position: relative;
+     padding: 50px 20px;
+     border: 1px solid #bfbfbf;
+
+     .downLoadBtnWrap {
+         position: absolute;
+         top: 18px;
+         right: 25px;
+     }
+ }

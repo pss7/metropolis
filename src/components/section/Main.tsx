@@ -3,6 +3,7 @@ import Footer from './Footer';
 import SideMenu from './SideMenu';
 import Breadcrumb from '../Breadcrumb';
 
+
 function Main(props: any) {
 
   return (
@@ -10,11 +11,14 @@ function Main(props: any) {
       <Header />
       <SideMenu />
       <main id='main'>
+    
+
+
 
         {
 
           props.children
-    
+
 
         }
 

@@ -1,8 +1,15 @@
-import Tab from "../components/Tab"
+
 import Breadcrumb from "../components/Breadcrumb"
 import Main from "../components/section/Main"
+import Tab from "../components/Tab";
+import Table from "../components/Table";
+
+import Download from "../components/Download";
+import Select from "../components/Select";
+
 
 function MyPage() {
+
     return (
 
         <Main>
@@ -13,6 +20,8 @@ function MyPage() {
 
                         <Breadcrumb />
                         <Tab />
+                        <Tab />
+                        <Table />
 
                     </div>
                 </div>

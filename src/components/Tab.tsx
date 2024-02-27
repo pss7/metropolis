@@ -1,45 +1,65 @@
 import { Link } from "react-router-dom";
-import { tabList } from "../data/data";
 import { useState } from "react";
+import ReportCard from "./ReportCard";
+import Table from "./Table";
 
 function Tab() {
 
-    const [tab, setTab] = useState(false);
+    const tabData = [
+        {
+            id: 0,
+            title: '일간',
+            description: <ReportCard />
+        },
+        {
+            id: 1,
+            title: '주간',
+            description: <Table />
+        },
+        {
+            id: 2,
+            title: '월간',
+            description: <Table />
+        },
+        {
+            id: 3,
+            title: '분기',
+            description: <Table />
+        },
+        {
+            id: 4,
+            title: '연간',
+            description: <Table />
+        },
+    ]
 
+    const [tabMenu, setTab] = useState(0);
 
     return (
         <>
             <div className="tabListWrap">
                 <ul className="tabList">
                     {
-                        tabList.map((tabList, key) => (
-                            <li key={key}>
-                                <Link to="#" onClick={() => {
-
+                        tabData.map((tab, key) => (
+                            <li key={key} >
+                                <Link className={tabMenu === tab.id ? 'active' : ''} to="#" onClick={() => {
+                                    setTab(tab.id)
                                 }}>
-                                    {tabList.name}
+                                    {tab.title}
                                 </Link>
                             </li>
                         ))
                     }
                 </ul>
-            </div>
 
-            <div className="tabContentWrap">
-                <div className="tabContent">
-                    내용1
-                </div>
-                <div className="tabContent">
-                    내용2
-                </div>
-                <div className="tabContent">
-                    내용3
-                </div>
-                <div className="tabContent">
-                    내용4
-                </div>
-                <div className="tabContent">
-                    내용5
+                <div className="tabContentWrap">
+                    {
+                        tabData.filter(tabData => tabMenu === tabData.id).map((tab) => (
+                            <div className='tabcontent'>
+                                {tab.description}
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </>
