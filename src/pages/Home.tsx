@@ -2,6 +2,7 @@ import Table from "../components/Table";
 import Breadcrumb from "../components/Breadcrumb";
 import Main from "../components/section/Main";
 import Tab from "../components/Tab";
+import Title from "../components/Title";
 
 
 function Home01() {
@@ -31,10 +32,12 @@ function Home() {
                 <div className='main'>
 
 
-                    <Breadcrumb />
-                    <h3 className='titText03'>
-                        한국관광콘텐츠랩에 오신 걸 환영합니다.
-                    </h3>
+                    {/* <Breadcrumb /> */}
+     
+
+
+                    <Title className="titleText3" level={3} text="한국관광콘텐츠랩에 오신 걸 환영합니다." />
+
 
                     <div className="layoutWrap">
                         <Home01 />
